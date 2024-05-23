@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\Cabinet Unpack\\Cabinet Unpack\\Cabinet Unpack.vbproj": {}
+    "D:\\Source VBNet_C#\\GitHub\\Cabinet-UnPacK\\Cabinet Unpack\\Cabinet Unpack.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\Cabinet Unpack\\Cabinet Unpack\\Cabinet Unpack.vbproj": {
+    "D:\\Source VBNet_C#\\GitHub\\Cabinet-UnPacK\\Cabinet Unpack\\Cabinet Unpack.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Cabinet Unpack\\Cabinet Unpack\\Cabinet Unpack.vbproj",
+        "projectUniqueName": "D:\\Source VBNet_C#\\GitHub\\Cabinet-UnPacK\\Cabinet Unpack\\Cabinet Unpack.vbproj",
         "projectName": "Cabinet Unpack",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cabinet Unpack\\Cabinet Unpack\\Cabinet Unpack.vbproj",
+        "projectPath": "D:\\Source VBNet_C#\\GitHub\\Cabinet-UnPacK\\Cabinet Unpack\\Cabinet Unpack.vbproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Cabinet Unpack\\Cabinet Unpack\\obj\\",
+        "outputPath": "D:\\Source VBNet_C#\\GitHub\\Cabinet-UnPacK\\Cabinet Unpack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

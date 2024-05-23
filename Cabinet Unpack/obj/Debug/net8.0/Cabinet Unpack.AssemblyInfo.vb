@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Cabinet Unpack"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99449c0ece10866bacc23c0bb7eea0682da6cc12"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Cabinet Unpack"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Cabinet Unpack"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
