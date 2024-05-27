@@ -1,3 +1,4 @@
+'https://learn.microsoft.com/en-us/previous-versions/bb417343(v=msdn.10)?redirectedfrom=MSDN
 Imports System
 Imports System.Collections
 Imports System.IO
