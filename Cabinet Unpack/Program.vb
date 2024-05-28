@@ -44,6 +44,11 @@ Module Program
             Dim cbCFHeader As UShort = br.ReadUInt16 ' (optional) size of per-cabinet reserved area
             Dim cbCFFolder As Byte = br.ReadByte ' (optional) size of per-folder reserved area
             Dim cbCFData As Byte = br.ReadByte ' (optional) size of per-datablock reserved area
+            Dim abReserve As Byte() ' (optional) per-cabinet reserved area
+            Dim szCabinetPrev As Byte() ' (optional) name of previous cabinet file
+            Dim szDiskPrev As Byte() ' (optional) name of previous disk
+            Dim szCabinetNext As Byte() ' (optional) name of next cabinet file
+            Dim szDiskNext As Byte() ' (optional) name of next disk
 
 
 
