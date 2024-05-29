@@ -24,24 +24,24 @@ Module Program
             br = New BinaryReader(File.OpenRead(input))
             Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(4)) ' file signature
             Console.WriteLine("signature : {0}", signature)
-            Dim reserved1 As UInteger = br.ReadUInt32 ' reserved
-            Dim cbCabinet As UInteger = br.ReadUInt32 ' size of this cabinet file in bytes
+            Dim reserved1 As UInt32 = br.ReadUInt32 ' reserved
+            Dim cbCabinet As UInt32 = br.ReadUInt32 ' size of this cabinet file in bytes
             Console.WriteLine("cbCabinet : {0}", cbCabinet)
-            Dim reserved2 As UInteger = br.ReadUInt32 ' reserved
-            Dim coffFiles As UInteger = br.ReadUInt32 ' offset of the first CFFILE entry
-            Dim reserved3 As UInteger = br.ReadUInt32 ' reserved
+            Dim reserved2 As UInt32 = br.ReadUInt32 ' reserved
+            Dim coffFiles As UInt32 = br.ReadUInt32 ' offset of the first CFFILE entry
+            Dim reserved3 As UInt32 = br.ReadUInt32 ' reserved
             Dim versionMinor As Byte = br.ReadByte ' cabinet file format version, minor
             Console.WriteLine("versionMinor : {0}", versionMinor)
             Dim versionMajor As Byte = br.ReadByte ' cabinet file format version, major
             Console.WriteLine("versionMajor : {0}", versionMajor)
-            Dim cFolders As UShort = br.ReadUInt16 ' number of CFFOLDER entries in this cabinet
+            Dim cFolders As UInt16 = br.ReadUInt16 ' number of CFFOLDER entries in this cabinet
             Console.WriteLine("Folder : {0}", cFolders)
-            Dim cFiles As UShort = br.ReadUInt16 ' number of CFFILE entries in this cabinet
+            Dim cFiles As UInt16 = br.ReadUInt16 ' number of CFFILE entries in this cabinet
             Console.WriteLine("File : {0}", cFiles)
-            Dim flags As UShort = br.ReadUInt16 ' cabinet file option indicators
-            Dim setID As UShort = br.ReadUInt16 ' must be the same for all cabinets in a set
-            Dim iCabinet As UShort = br.ReadUInt16 ' number of this cabinet file in a set
-            Dim cbCFHeader As UShort = br.ReadUInt16 ' (optional) size of per-cabinet reserved area
+            Dim flags As UInt16 = br.ReadUInt16 ' cabinet file option indicators
+            Dim setID As UInt16 = br.ReadUInt16 ' must be the same for all cabinets in a set
+            Dim iCabinet As UInt16 = br.ReadUInt16 ' number of this cabinet file in a set
+            Dim cbCFHeader As UInt16 = br.ReadUInt16 ' (optional) size of per-cabinet reserved area
             Dim cbCFFolder As Byte = br.ReadByte ' (optional) size of per-folder reserved area
             Dim cbCFData As Byte = br.ReadByte ' (optional) size of per-datablock reserved area
             Dim abReserve As Byte() ' (optional) per-cabinet reserved area
@@ -50,22 +50,11 @@ Module Program
             Dim szCabinetNext As Byte() ' (optional) name of next cabinet file
             Dim szDiskNext As Byte() ' (optional) name of next disk
 
-
-
-
-            Dim subfiles As New List(Of FileData)()
-            For j As UInt16 = 0 To cFiles - 1
-                subfiles.Add(
-                    New FileData
+            Dim subtables As New List(Of TableData)()
+            For i As UInt16 = 0 To cFolders - 1
+                subtables.Add(
+                    New TableData
                 )
-            Next
-
-
-
-            For Each f As FileData In subfiles
-
-                Console.WriteLine("szName : {0} - cbFile : {1} - attribs : {2}", f.szName, f.cbFile, f.attribs)
-
             Next
 
 
