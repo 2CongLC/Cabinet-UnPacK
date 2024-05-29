@@ -57,7 +57,20 @@ Module Program
                 )
             Next
 
+            Dim subfiles as New List(Of FileData)()
+            For j as UInt16 = 0 To CFiles - 1
+                 subfiles.Add(
+                       New FileData
+                   )
+            Next
 
+            Dim subcdatas as New List(Of CFDATA)
+            For Each td as TableData In subtables
+                br.BaseStream.Position  = td.coffCabStart
+                For k as UInt16 = 0 To cCFData - 1
+                     subcdatas.Add(New CFDATA)
+                Next
+             Next
 
 
         End If
@@ -94,7 +107,7 @@ Module Program
             [date] = br.ReadUInt16
             time = br.ReadUInt16
             attribs = br.ReadUInt16
-            szName = br.ReadUInt16
+            szName = New String(br.ReadChars(br.ReadUInt16))
         End Sub
     End Class
 
