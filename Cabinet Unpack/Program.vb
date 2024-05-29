@@ -22,7 +22,7 @@ Module Program
         If IO.File.Exists(input) Then
 
             br = New BinaryReader(File.OpenRead(input))
-            Dim signature As String = Encoding.ASCII.GetString(br.ReadBytes(4)) ' file signature
+            Dim signature As String =  New String(br.ReadChars(4)) ' file signature
             Console.WriteLine("signature : {0}", signature)
             Dim reserved1 As UInt32 = br.ReadUInt32 ' reserved
             Dim cbCabinet As UInt32 = br.ReadUInt32 ' size of this cabinet file in bytes
@@ -64,7 +64,7 @@ Module Program
                    )
             Next
 
-            Dim subcdatas as New List(Of CFDATA)
+            Dim subcdatas as New List(Of CFDATA)()
             For Each td as TableData In subtables
                 br.BaseStream.Position  = td.coffCabStart
                 For k as UInt16 = 0 To cCFData - 1
