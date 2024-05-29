@@ -107,7 +107,7 @@ Module Program
             [date] = br.ReadUInt16
             time = br.ReadUInt16
             attribs = br.ReadUInt16
-            szName = New String(br.ReadChars(br.ReadUInt16))
+            szName = br.ReadString
         End Sub
     End Class
 
